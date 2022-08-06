@@ -20,7 +20,7 @@ async function ConectionServer() {
 
     dataArray = data.serie.slice(0, 10);
     const datChange = dataArray.map((x) => x.valor);
-    const datLabel = dataArray.map((x) => x.fecha.slice(0, 10));
+    const datLabel = dataArray.map((x) => x.fecha);
     chartRender(datLabel, datChange);
     document.querySelector("#error").innerHTML =
       "Mensaje del Servidor: conexión realizada con éxito";

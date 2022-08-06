@@ -1,6 +1,6 @@
 let inputAmount = document.querySelector("#inputAmount");
 let selectTypeMoney = document.querySelector("#selectTypeMoney");
-let btn = document.querySelector("#btn");
+let button = document.querySelector("#button");
 let dataArray = [];
 let myChart = null;
 let lastchange = 0;
@@ -73,7 +73,7 @@ function calculo() {
   document.querySelector("#resultado").innerHTML = "Resultado  :  " + resultado;
 }
 
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
   if (inputAmount.value == "") {
     alert("Debe ingresar un valor");
     return;

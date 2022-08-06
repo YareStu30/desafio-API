@@ -18,15 +18,15 @@ async function ConectionServer() {
 
     calculo();
 
-    dataArray = data.serie;
+    dataArray = data.serie.slice(0, 10);
     const datChange = dataArray.map((x) => x.valor);
-    const datLabel = dataArray.map((x) => x.fecha);
+    const datLabel = dataArray.map((x) => x.fecha.slice(0, 10));
     chartRender(datLabel, datChange);
     document.querySelector("#error").innerHTML =
-      "Mensaje del Servidor: conexión realizada";
+      "Mensaje del Servidor: conexión realizada con éxito";
   } catch (e) {
     document.querySelector("#error").innerHTML =
-      "Mensaje del Servidor: No se pudo establecer la conexión";
+      "Mensaje del Servidor: No se pudo encontrar el dato";
     document.querySelector("#resultado").innerHTML = "....";
   }
 }
